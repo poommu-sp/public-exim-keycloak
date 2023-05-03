@@ -1,0 +1,196 @@
+{
+    "results": [
+        {
+            "resource": {
+                "name": "spec with scopes [edit_submit, add, view, edit]",
+                "_id": "becdd6cc-31db-49eb-9546-3d2474568434"
+            },
+            "scopes": [
+                {
+                    "id": "a8b1854f-50c6-432f-b446-7bf9d6f107b5",
+                    "name": "edit_submit"
+                },
+                {
+                    "id": "8c75dd42-5971-4d46-97cd-3deb5cb91068",
+                    "name": "add"
+                },
+                {
+                    "id": "640edc0c-b49b-4d61-a94c-e6edf44aa724",
+                    "name": "view"
+                },
+                {
+                    "id": "44b059aa-568f-4ce4-843c-4475d2e62439",
+                    "name": "edit"
+                }
+            ],
+            "policies": [
+                {
+                    "policy": {
+                        "id": "036706d1-abb0-402d-80c9-6a399793c69f",
+                        "name": "add_edit_spec_permission",
+                        "type": "scope",
+                        "resources": [
+                            "spec"
+                        ],
+                        "scopes": [
+                            "add",
+                            "edit"
+                        ],
+                        "logic": "POSITIVE",
+                        "decisionStrategy": "UNANIMOUS",
+                        "config": {}
+                    },
+                    "status": "DENY",
+                    "associatedPolicies": [
+                        {
+                            "policy": {
+                                "id": "56777f5e-e177-42f1-b5e1-8ade3ca61e4b",
+                                "name": "spec_add_edit",
+                                "type": "role",
+                                "resources": [],
+                                "scopes": [],
+                                "logic": "POSITIVE",
+                                "decisionStrategy": "UNANIMOUS",
+                                "config": {}
+                            },
+                            "status": "DENY",
+                            "associatedPolicies": [],
+                            "scopes": []
+                        }
+                    ],
+                    "scopes": [
+                        "add",
+                        "edit"
+                    ]
+                }
+            ],
+            "status": "DENY",
+            "allowedScopes": []
+        },
+        {
+            "resource": {
+                "name": "product with scopes [add, edit]",
+                "_id": "38448871-11a8-44c4-9d77-b46764664be4"
+            },
+            "scopes": [
+                {
+                    "id": "8c75dd42-5971-4d46-97cd-3deb5cb91068",
+                    "name": "add"
+                },
+                {
+                    "id": "44b059aa-568f-4ce4-843c-4475d2e62439",
+                    "name": "edit"
+                }
+            ],
+            "policies": [
+                {
+                    "policy": {
+                        "id": "08ffee62-2ed2-4c98-9d95-ced57d2fd630",
+                        "name": "add_edit_product_permission",
+                        "type": "scope",
+                        "resources": [
+                            "product"
+                        ],
+                        "scopes": [
+                            "add",
+                            "edit"
+                        ],
+                        "logic": "POSITIVE",
+                        "decisionStrategy": "UNANIMOUS",
+                        "config": {}
+                    },
+                    "status": "PERMIT",
+                    "associatedPolicies": [
+                        {
+                            "policy": {
+                                "id": "14b23c62-d00d-47ff-b80d-b6034149f7eb",
+                                "name": "product_add_edit",
+                                "type": "role",
+                                "resources": [],
+                                "scopes": [],
+                                "logic": "POSITIVE",
+                                "decisionStrategy": "UNANIMOUS",
+                                "config": {}
+                            },
+                            "status": "PERMIT",
+                            "associatedPolicies": [],
+                            "scopes": []
+                        }
+                    ],
+                    "scopes": []
+                }
+            ],
+            "status": "PERMIT",
+            "allowedScopes": [
+                {
+                    "id": "8c75dd42-5971-4d46-97cd-3deb5cb91068",
+                    "name": "add"
+                },
+                {
+                    "id": "44b059aa-568f-4ce4-843c-4475d2e62439",
+                    "name": "edit"
+                }
+            ]
+        }
+    ],
+    "entitlements": false,
+    "status": "DENY",
+    "rpt": {
+        "jti": "15b7828a-6af3-413f-bf79-f6cd7af42c02",
+        "exp": 1550476591,
+        "nbf": 0,
+        "iat": 1550476291,
+        "aud": "pending",
+        "sub": "0ee609d4-5f1e-4e99-ac24-e7f227adc4d9",
+        "typ": "Bearer",
+        "azp": "pending",
+        "auth_time": 0,
+        "session_state": "e01960ee-3a7e-4b72-bb9d-31cc0130fb17",
+        "acr": "1",
+        "realm_access": {
+            "roles": [
+                "offline_access",
+                "uma_authorization"
+            ]
+        },
+        "resource_access": {
+            "realm-management": {
+                "roles": [
+                    "view-realm",
+                    "manage-users",
+                    "view-authorization",
+                    "query-clients",
+                    "query-groups",
+                    "query-users"
+                ]
+            },
+            "pending": {
+                "roles": [
+                    "manager"
+                ]
+            },
+            "account": {
+                "roles": [
+                    "manage-account",
+                    "manage-account-links",
+                    "view-profile"
+                ]
+            }
+        },
+        "authorization": {
+            "permissions": [
+                {
+                    "scopes": [
+                        "add",
+                        "edit"
+                    ],
+                    "rsid": "38448871-11a8-44c4-9d77-b46764664be4",
+                    "rsname": "product"
+                }
+            ]
+        },
+        "scope": "profile email",
+        "email_verified": false,
+        "preferred_username": "bank"
+    }
+}
